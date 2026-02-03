@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Heart } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ const Footer = () => {
           {/* Organization Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-xl">GB</span>
-              </div>
+              <img src={logo} alt="Girls Bloom & Growth Logo" className="w-12 h-12 rounded-full object-cover" />
               <div>
                 <h3 className="font-serif text-lg font-semibold">Girls Bloom & Growth</h3>
                 <p className="text-sm opacity-80">Initiative for Development</p>

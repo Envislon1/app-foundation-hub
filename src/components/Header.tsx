@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,6 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/#about" },
     { name: "Contact", path: "/#contact" },
-    { name: "Privacy Policy", path: "/privacy-policy" },
-    { name: "Terms & Conditions", path: "/terms-and-conditions" },
   ];
 
   const isActive = (path: string) => {
@@ -26,9 +25,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-xl">GB</span>
-            </div>
+            <img src={logo} alt="Girls Bloom & Growth Logo" className="w-12 h-12 rounded-full object-cover" />
             <div className="hidden sm:block">
               <h1 className="font-serif text-lg font-semibold text-foreground leading-tight">
                 Girls Bloom & Growth
